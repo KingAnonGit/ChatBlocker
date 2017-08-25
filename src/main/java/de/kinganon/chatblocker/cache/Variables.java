@@ -1,11 +1,13 @@
 package de.kinganon.chatblocker.cache;
 
 import com.google.common.collect.Maps;
+import lombok.Getter;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import java.util.HashMap;
 
 public class Variables {
+    @Getter
     public static String prefixConsole = "[ChatBlocker] >> ";
     public static String prefixUser = "§eDurchrasten §8» §7";
     public static HashMap<ProxiedPlayer, Long> userTimes = Maps.newHashMap();
