@@ -1,0 +1,7 @@
+name: ChatBlocker
+version: 0.1
+author: KingAnon
+
+main: de.kinganon.chatblocker.ChatBlocker
+
+commands:
