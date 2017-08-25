@@ -12,12 +12,16 @@ public class ChatBlocker extends Plugin {
     @Getter
     private static ChatBlocker chatBlocker;
     
+    @Getter
+    private static Plugin plugin;
+    
     public ChatBlocker() {
         chatBlocker = this;
     }
     
     public void onEnable() {
-        FIleManager.createConfig();
+        plugin = this;
+        FileManager.createConfig();
         new MySQL();
         new ChatEvent(this);
         new JoinEvent(this);

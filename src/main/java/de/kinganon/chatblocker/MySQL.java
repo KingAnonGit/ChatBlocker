@@ -17,9 +17,9 @@ public class MySQL extends Plugin {
         if (!isConnected()) {
             try {
                 connection = DriverManager.getConnection(
-                        "jdbc:mysql://" + FIleManager.configuration.getString("MySQL.Host") + ":" + FIleManager.configuration.getString("MySQL.Port") + "/"
-                                + FIleManager.configuration.getString("MySQL.Datenbank"),
-                        FIleManager.configuration.getString("MySQL.Benutzername"), FIleManager.configuration.getString("MySQL.Passwort"));
+                        "jdbc:mysql://" + FileManager.configuration.getString("MySQL.Host") + ":" + FileManager.configuration.getString("MySQL.Port") + "/"
+                                + FileManager.configuration.getString("MySQL.Datenbank"),
+                        FileManager.configuration.getString("MySQL.Benutzername"), FileManager.configuration.getString("MySQL.Passwort"));
                 createTable();
                 System.out.println(Variables.prefixConsole + "MySQL Verbindung hergestellt");
             } catch (SQLException e) {

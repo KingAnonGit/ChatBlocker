@@ -7,17 +7,17 @@ import net.md_5.bungee.config.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
-public class FIleManager {
+public class FileManager {
     
     public static File file;
     public static Configuration configuration;
     
     public static void createConfig() {
         try {
-            if (!new ChatBlocker().getDataFolder().exists()) {
-                new ChatBlocker().getDataFolder().mkdir();
+            if (!ChatBlocker.getPlugin().getDataFolder().exists()) {
+                new ChatBlocker().getPlugin().getDataFolder().mkdir();
             }
-            file = new File(new ChatBlocker().getDataFolder().getPath(), "config.yml");
+            file = new File(new ChatBlocker().getPlugin().getDataFolder().getPath(), "config.yml");
             if (!file.exists()) {
                 file.createNewFile();
                 configuration = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
